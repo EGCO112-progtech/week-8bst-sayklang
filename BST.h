@@ -128,7 +128,7 @@ void printTree(TreeNodePtr treePtr, int level) {
        for (int i = 0; i < level; i++) {
            printf("   ");
        }
-       printf("%d\n", treePtr->data);
+       printf("%3d\n", treePtr->data);
        printTree(treePtr->leftPtr, level + 1);
    }
 }
