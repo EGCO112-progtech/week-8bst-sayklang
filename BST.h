@@ -128,14 +128,14 @@ void printTree(TreeNodePtr treePtr, int space)
       return;
 
    // Increase distance between levels
-   space += 6;
+   space += 4;
 
    // Print right subtree first
    printTree(treePtr->rightPtr, space);
 
    // Print current node after space
    printf("\n");
-   for (int i = 6; i < space; i++)
+   for (int i = 4; i < space; i++)
       printf(" "); // spaces for indentation
    printf("%d\n", treePtr->data);
 
