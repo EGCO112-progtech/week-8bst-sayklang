@@ -121,3 +121,26 @@ void postOrder(TreeNodePtr treePtr)
       printf("%3d", treePtr->data); // print the value
    } // end if
 }
+
+void printTree(TreeNodePtr treePtr, int space)
+{
+   if (treePtr == NULL)
+      return;
+
+   // Increase distance between levels
+   space += 5;
+
+   // Print right subtree first
+   printTree(treePtr->rightPtr, space);
+
+   // Print current node after space
+   printf("\n");
+   for (int i = 5; i < space; i++)
+      printf(" "); // spaces for indentation
+   printf("%d\n", treePtr->data);
+
+   // Print left subtree
+   printTree(treePtr->leftPtr, space);
+}
+
+
